@@ -1,8 +1,18 @@
 {
+  "name": "HairDay",
+  "description": "Aplicação para agendamento de serviços de beleza",
+  "version": "1.0.0",
+  "author": "Winston Hanun Júnior",
+  "license": "MIT",
   "scripts": {
-    "server": "json-server --watch server.json --port 3000"
+    "server": "json-server --watch server.json --port 3000",
+    "build": "webpack"
   },
   "dependencies": {
     "json-server": "^1.0.0-beta.3"
+  },
+  "devDependencies": {
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
   }
 }
