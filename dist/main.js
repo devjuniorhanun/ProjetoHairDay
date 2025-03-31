@@ -69,7 +69,7 @@ eval("!function (e, o) {\n   true ? module.exports = o(__webpack_require__(/*! d
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _libs_dayjs_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../libs/dayjs.js */ \"./src/libs/dayjs.js\");\n/* harmony import */ var _css_global_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/global.css */ \"./src/css/global.css\");\n/* harmony import */ var _css_form_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../css/form.css */ \"./src/css/form.css\");\n/* harmony import */ var _css_schedule_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../css/schedule.css */ \"./src/css/schedule.css\");\n/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dayjs */ \"./node_modules/dayjs/dayjs.min.js\");\n/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_4__);\n\n\n//confiiguração do dayjs\n\n\n//css\n\n\n\n\nconsole.log(dayjs__WEBPACK_IMPORTED_MODULE_4___default()().format(\"DD/MM - HH:mm\"));\n\n//# sourceURL=webpack://HairDay/./src/js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _libs_dayjs_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../libs/dayjs.js */ \"./src/libs/dayjs.js\");\n/* harmony import */ var _css_global_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/global.css */ \"./src/css/global.css\");\n/* harmony import */ var _css_form_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../css/form.css */ \"./src/css/form.css\");\n/* harmony import */ var _css_schedule_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../css/schedule.css */ \"./src/css/schedule.css\");\n/* harmony import */ var _modules_form_submit_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../modules/form/submit.js */ \"./src/modules/form/submit.js\");\n\n\n//confiiguração do dayjs\n\n\n//css\n\n\n\n\n// JS\n\n\n//# sourceURL=webpack://HairDay/./src/js/main.js?");
 
 /***/ }),
 
@@ -81,6 +81,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _lib
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! dayjs */ \"./node_modules/dayjs/dayjs.min.js\");\n/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var dayjs_locale_pt_br__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! dayjs/locale/pt-br */ \"./node_modules/dayjs/locale/pt-br.js\");\n/* harmony import */ var dayjs_locale_pt_br__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(dayjs_locale_pt_br__WEBPACK_IMPORTED_MODULE_1__);\n\n\ndayjs__WEBPACK_IMPORTED_MODULE_0___default().locale(\"pt-BR\");\n\n//# sourceURL=webpack://HairDay/./src/libs/dayjs.js?");
+
+/***/ }),
+
+/***/ "./src/modules/form/submit.js":
+/*!************************************!*\
+  !*** ./src/modules/form/submit.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! dayjs */ \"./node_modules/dayjs/dayjs.min.js\");\n/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_0__);\n// Importando dayjs\n\n\n// Recuperando o elemento do formulário\nconst form = document.querySelector(\"form\");\n// Recuerando o elemento do campo de data\nconst selectedDate = document.getElementById(\"date\");\n\n//************************* */\n//Carrega a data atual\nconst inputToday = dayjs__WEBPACK_IMPORTED_MODULE_0___default()(new Date()).format(\"YYYY-MM-DD\");\n\n// Recuperando as informações do formulário, através do evento de submit\n// O evento é disparado quando o usuário clica no botão de enviar ou pressiona Enter\n// O evento é passado como parâmetro para a função de callback\nform.onsubmit = async event => {\n  // Previne o comportamento padrão do formulário\n  event.preventDefault();\n};\n\n//# sourceURL=webpack://HairDay/./src/modules/form/submit.js?");
 
 /***/ }),
 
