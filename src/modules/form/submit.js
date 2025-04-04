@@ -1,5 +1,7 @@
 // Importando dayjs
 import dayjs from "dayjs";
+import { scheduleNew } from "../../services/schedule-new";
+import { schedulesDay } from "../schedules/load";
 
 // Recuperando o elemento do formulário
 const form = document.querySelector("form");
@@ -27,30 +29,35 @@ form.onsubmit = async (event) => {
   try {
     // Recuperando o nome do cliente
     const name = clientName.value.trim();
-    if(name === "") {
+    if (name === "") {
       return alert("Preencha o nome do cliente");
     }
-    // Recuperando a horario selecionado 
+    // Recuperando a horario selecionado
     const hourSelected = document.querySelector(".hour-selected");
-   
+
     // Verificando se o horário foi selecionado
-    if(!hourSelected) {
+    if (!hourSelected) {
       return alert("Selecione um horário");
     }
     // Recuperando o horário selecionado
     const [hour] = hourSelected.innerHTML.split(":");
-    
-    // Inserindo o horário no formato correto
-    const when = dayjs(selectedDate.value).add(hour, "hour")    
-   
-    // Gerando um Id
-    const id =  new Date().getTime();
 
-    console.log({
+    // Inserindo o horário no formato correto
+    const when = dayjs(selectedDate.value).add(hour, "hour");
+
+    // Gerando um Id
+    const id = new Date().getTime();
+    // Realizando o agendamento
+    await scheduleNew({
       id,
       name,
       when,
     });
+    // Atualiza a lista de agendamentos
+    await schedulesDay();
+
+    // Limpa o nome do cliente
+    clientName.value = "";
   } catch (error) {
     alert("Não foi possível realizar o agendamento");
     console.log(error);
